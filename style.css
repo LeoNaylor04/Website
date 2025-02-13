@@ -1,0 +1,56 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	color: #333;
+	text-align: left; /* Align text to the left */
+	margin: 0;
+	padding: 0;
+	position: relative;
+	min-height: 100vh; /* Ensure body takes full height */
+	padding-left: 20px; /* Add some space for left alignment */
+}
+
+h1 {
+	color: #007bff;
+}
+
+button {
+	background-color: #28a745;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	position: absolute; /* Make button absolute to prevent it from affecting text */
+	left: 50%; /* Center horizontally */
+	top: 50%; /* Center vertically (can be adjusted based on preference) */
+	transform: translate(-50%, -50%); /* Center the button properly */
+	transition: transform 1s ease-in-out;
+}
+
+/* Define the animation */
+@keyframes expandAndDance {
+	0% {
+		transform: scale(1) rotate(0deg) translate(0, 0);
+	}
+
+	25% {
+		transform: scale(1.5) rotate(90deg) translate(30px, -30px);
+	}
+
+	50% {
+		transform: scale(2.5) rotate(180deg) translate(-50px, 50px);
+	}
+
+	75% {
+		transform: scale(3) rotate(270deg) translate(40px, -70px);
+	}
+
+	100% {
+		transform: scale(5) rotate(360deg) translate(-30px, 30px);
+	}
+}
+
+button.expanded {
+	animation: expandAndDance 2s ease-in-out;
+}
